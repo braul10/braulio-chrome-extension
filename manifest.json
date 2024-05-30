@@ -19,19 +19,29 @@
     "128": "images/icon-128.png"
   },
   "commands": {
-    "open_url": {
-        "suggested_key": {
-            "default": "Ctrl+C",
-            "mac": "MacCtrl+C"
-        },
-        "description": "Open a specific URL"
+    "open_chatgpt": {
+      "suggested_key": {
+        "default": "Alt+C"
+      },
+      "description": "Open a specific URL"
     },
     "open_maps_in_incognito": {
-        "suggested_key": {
-            "default": "Ctrl+M",
-            "mac": "MacCtrl+M"
-        },
-        "description": "Open Google Maps in Incognito"
+      "suggested_key": {
+        "default": "Alt+M"
+      },
+      "description": "Open Google Maps in Incognito"
+    },
+    "open_github": {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "Open Github"
+    },
+    "open_x": {
+      "suggested_key": {
+        "default": "Alt+X"
+      },
+      "description": "Open X"
     }
-}
+  }
 }

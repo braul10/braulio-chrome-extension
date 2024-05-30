@@ -27,7 +27,7 @@ function togglePasswordVisibility() {
 }
 
 chrome.commands.onCommand.addListener(function (command) {
-  if (command === "open_url") {
+  if (command === "open_chatgpt") {
     chrome.tabs.create(
       { url: "https://chatgpt.com/?model=gpt-4o&temporary-chat=true" },
       function (tab) {
@@ -43,6 +43,14 @@ chrome.commands.onCommand.addListener(function (command) {
       function (window) {
         console.log("Incognito window created with Google Maps");
       }
+    );
+  } else if (command === "open_github") {
+    chrome.tabs.create(
+      { url: "https://github.com/braul10" }
+    );
+  } else if (command === "open_x") {
+    chrome.tabs.create(
+      { url: "https://x.com/home" }
     );
   }
 });
