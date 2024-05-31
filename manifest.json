@@ -12,6 +12,12 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://consent.google.com/*"],
+      "js": ["consentGoogle.js"]
+    }
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
