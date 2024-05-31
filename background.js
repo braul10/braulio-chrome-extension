@@ -35,22 +35,27 @@ chrome.commands.onCommand.addListener(function (command) {
       }
     );
   } else if (command === "open_maps_in_incognito") {
-    chrome.windows.create(
-      {
-        url: "https://www.google.com/maps/@40.215729,-4.2352874,1520556m/data=!3m1!1e3?entry=ttu",
-        incognito: true,
-      },
-      function (window) {
-        console.log("Incognito window created with Google Maps");
+    chrome.windows.getCurrent({ populate: false }, function (currentWindow) {
+      url =
+        "https://www.google.com/maps/@40.215729,-4.2352874,1520556m/data=!3m1!1e3?entry=ttu";
+      if (currentWindow.incognito) {
+        chrome.tabs.create({
+          url: url,
+        });
+      } else {
+        chrome.windows.create({
+          url: url,
+          incognito: true,
+        });
       }
-    );
+    });
   } else if (command === "open_github") {
-    chrome.tabs.create(
-      { url: "https://github.com/braul10" }
-    );
-  } else if (command === "open_x") {
-    chrome.tabs.create(
-      { url: "https://x.com/home" }
-    );
+    chrome.tabs.create({ url: "https://github.com/braul10" });
+  } else if (command === "openIncognitoAndClose") {
+    chrome.windows.getCurrent((currentWindow) => {
+      chrome.windows.create({ incognito: true }, (newWindow) => {
+        chrome.windows.remove(currentWindow.id);
+      });
+    });
   }
 });

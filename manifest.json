@@ -46,9 +46,9 @@
       },
       "description": "Open Github"
     },
-    "open_x": {
+    "openIncognitoAndClose": {
       "suggested_key": {
-        "default": "Alt+X"
+        "default": "Alt+I"
       },
       "description": "Open X"
     }
