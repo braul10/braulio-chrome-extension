@@ -14,8 +14,21 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://consent.google.com/*"],
-      "js": ["consentGoogle.js"]
+      "matches": [
+        "https://consent.google.com/*",
+        "https://www.google.com/maps/*"
+      ],
+      "js": [
+        "consentGoogle.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "rejectYoutubeCookies.js"
+      ]
     }
   ],
   "action": {
