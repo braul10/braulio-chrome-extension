@@ -1,7 +1,8 @@
+// SEE PASSWORD
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "viewPassword",
-    title: "VER CONTRASINAL",
+    title: "SEE PASSWORD",
     contexts: ["editable"],
   });
 });
@@ -26,6 +27,7 @@ function togglePasswordVisibility() {
   }
 }
 
+// KEYBOARD SHORTCUTS
 chrome.commands.onCommand.addListener(function (command) {
   if (command === "open_chatgpt") {
     chrome.tabs.create(
