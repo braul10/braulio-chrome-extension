@@ -5,7 +5,7 @@ document.getElementById('openMaps').addEventListener('click', function() {
     chrome.tabs.create({ url: 'https://www.google.com/maps/@40.215729,-4.2352874,1520556m/data=!3m1!1e3?entry=ttu' });
 });
 document.getElementById('openGithub').addEventListener('click', function() {
-    chrome.tabs.create({ url: 'https://github.com/braul10' });
+    chrome.tabs.create({ url: 'https://github.com/orgs/Innogando/repositories' });
 });
 document.getElementById('openX').addEventListener('click', function() {
     chrome.tabs.create({ url: 'https://x.com/home' });

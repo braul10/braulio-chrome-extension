@@ -52,7 +52,7 @@ chrome.commands.onCommand.addListener(function (command) {
       }
     });
   } else if (command === "open_github") {
-    chrome.tabs.create({ url: "https://github.com/braul10" });
+    chrome.tabs.create({ url: "https://github.com/orgs/Innogando/repositories" });
   } else if (command === "openIncognitoAndClose") {
     chrome.windows.getCurrent((currentWindow) => {
       chrome.windows.create({ incognito: true }, (newWindow) => {
